@@ -1,0 +1,13 @@
+{
+    "name": "madurmanov/yii2-post-to-social",
+    "type": "yii2-extension",
+    "version": "1.0.0",
+    "license": "MIT",
+    "homepage": "https://github.com/madurmanov/yii2-socials",
+    "authors": [
+        {
+            "name": "Mikhail Durmanov",
+            "email": "madurmanov@gmail.com"
+        }
+    ]
+}
