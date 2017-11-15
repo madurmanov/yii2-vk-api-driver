@@ -1,1 +1,1 @@
-# yii2-post-to-social
+# yii2-vk-api-driver

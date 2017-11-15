@@ -1,13 +1,18 @@
 {
-    "name": "madurmanov/yii2-post-to-social",
+    "name": "madurmanov/yii2-vk-api-driver",
     "type": "yii2-extension",
     "version": "1.0.0",
     "license": "MIT",
-    "homepage": "https://github.com/madurmanov/yii2-socials",
+    "homepage": "https://github.com/madurmanov/yii2-vk-api-driver",
     "authors": [
         {
             "name": "Mikhail Durmanov",
             "email": "madurmanov@gmail.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "madurmanov\\VkApiDriver\\": ""
+        }
+    }
 }
