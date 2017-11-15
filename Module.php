@@ -21,7 +21,7 @@ class Module extends BaseModule
       throw new InvalidConfigException('`accessToken` is not set');
   }
 
-  protected function request($method, $params)
+  public function request($method, $params)
   {
     $query = http_build_query($params);
     $url = self::API . "$method?$query";
@@ -31,7 +31,7 @@ class Module extends BaseModule
   public function wallPost($message = '', $attachments = '')
   {
     $params = [
-      'owner_id' => $this->ownerId,
+      'owner_id' => "-{$this->ownerId}",
       'access_token' => $this->accessToken,
       'from_group' => 1
     ];
