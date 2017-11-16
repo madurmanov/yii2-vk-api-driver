@@ -3,7 +3,6 @@
 namespace madurmanov\VkApiDriver;
 
 use yii\base\Widget as BaseWidget;
-use yii\base\InvalidConfigException;
 
 class Widget extends BaseWidget
 {
