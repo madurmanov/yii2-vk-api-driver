@@ -1,5 +1,14 @@
 {
     "name": "madurmanov/yii2-vk-api-driver",
+    "description": "Module that enables send request to vk api for Yii Framework 2.0.",
+    "keywords": [
+        "yii2",
+        "extension",
+        "module",
+        "api",
+        "social",
+        "vk"
+    ],
     "type": "yii2-extension",
     "version": "1.0.0",
     "license": "MIT",
