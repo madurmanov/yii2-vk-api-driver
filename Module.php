@@ -21,7 +21,7 @@ class Module extends BaseModule
     ]);
   }
 
-  public function request($method, $params, $accessToken = false)
+  public function request($method, $params = [], $accessToken = false)
   {
     if ($accessToken) $params['access_token'] = $this->accessToken;
     $url = self::API . "/method/{$method}?" . http_build_query($params);
