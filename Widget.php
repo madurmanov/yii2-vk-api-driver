@@ -11,7 +11,7 @@ class Widget extends BaseWidget
 
   public function run()
   {
-    return $this->render('vk-token-button', [
+    return $this->render('access-token-button', [
        'url' => "https://oauth.vk.com/authorize?client_id={$this->appId}&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope=wall,offline&response_type=token"
     ]);
   }

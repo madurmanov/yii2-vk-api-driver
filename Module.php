@@ -15,7 +15,7 @@ class Module extends BaseModule
   public $ownerIsCommunity = false;
   public $accessToken = '';
 
-  public function getTokenButton()
+  public function getAccessTokenButton()
   {
     return Widget::widget([
       'appId' => $this->appId
