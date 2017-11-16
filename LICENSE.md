@@ -1,4 +1,4 @@
-Copyright (C) 2017 by Mikhail Durmanov
+Copyright (c) 2017 by Mikhail Durmanov
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
