@@ -30,7 +30,7 @@ and copy access_token parameter from GET.
 
 ## Usage
 ```
-Yii::$app->getModule('VkApiDriver')->request('wall.post', [
+Yii::$app->getModule('VkApiDriver')->request('wall.post', 'GET', [
   'owner_id' => 0,
   'from_group' => 0,
   'message' => ''
