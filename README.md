@@ -1,9 +1,6 @@
 # yii2-vk-api-driver
 Module that enables send request to vk api for Yii Framework 2.0.
 
-## Methods
-- wallPost
-
 ## Installation
 ```
 composer require madurmanov/yii2-vk-api-driver "@dev"
@@ -14,22 +11,30 @@ composer require madurmanov/yii2-vk-api-driver "@dev"
 'modules' => [
   'VkApiDriver' => [
     'class' => 'madurmanov\VkApiDriver\Module',
-    'appId' => 0,
+    'clientId' => 0,
     'ownerId' => 0,
-    'ownerIsCommunity' => false,
-    'accessToken' => ''
+    'scope' => [],
+    'accessToken' => '',
+    'lang' => 'en',
+    'version' => '5.69'
   ]
 ]
+```
+
+## AccessToken
+```
+Execute:
+header('Location: ' . Yii::$app->getModule('VkApiDriver')->getAccessTokenUrl());
+and copy access_token parameter from GET.
 ```
 
 ## Usage
 ```
 Yii::$app->getModule('VkApiDriver')->request('wall.post', [
   'owner_id' => 0,
-  'from_group' => 1,
-  'message' => 'message'
+  'from_group' => 0,
+  'message' => ''
 ], true);
-Yii::$app->getModule('VkApiDriver')->wallPost(1, 'message');
 ```
 
 ## License
