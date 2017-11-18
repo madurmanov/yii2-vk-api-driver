@@ -9,7 +9,6 @@ class Module extends BaseModule
   const API_URL = 'https://api.vk.com/method';
 
   public $ownerID = 0;
-  public $scope = [];
   public $accessToken = '';
   public $lang = 'en';
   public $version = '5.69';
