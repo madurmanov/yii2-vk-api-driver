@@ -11,7 +11,6 @@ composer require madurmanov/yii2-vk-api-driver "@dev"
 'modules' => [
   'VkApiDriver' => [
     'class' => 'madurmanov\VkApiDriver\Module',
-    'clientId' => 0,
     'ownerId' => 0,
     'scope' => [],
     'accessToken' => '',
@@ -19,13 +18,6 @@ composer require madurmanov/yii2-vk-api-driver "@dev"
     'version' => '5.69'
   ]
 ]
-```
-
-## AccessToken
-```
-Execute:
-header('Location: ' . Yii::$app->getModule('VkApiDriver')->getAccessTokenUrl());
-and copy access_token parameter from GET.
 ```
 
 ## Usage
