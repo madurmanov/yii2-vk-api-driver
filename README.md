@@ -12,7 +12,6 @@ composer require madurmanov/yii2-vk-api-driver "@dev"
   'VkApiDriver' => [
     'class' => 'madurmanov\VkApiDriver\Module',
     'ownerId' => 0,
-    'scope' => [],
     'accessToken' => '',
     'lang' => 'en',
     'version' => '5.69'
