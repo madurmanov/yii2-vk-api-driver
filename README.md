@@ -11,7 +11,7 @@ composer require madurmanov/yii2-vk-api-driver "@dev"
 'modules' => [
   'VkApiDriver' => [
     'class' => 'madurmanov\VkApiDriver\Module',
-    'ownerId' => 0,
+    'ownerID' => 0,
     'accessToken' => '',
     'lang' => 'en',
     'version' => '5.69'
@@ -21,8 +21,9 @@ composer require madurmanov/yii2-vk-api-driver "@dev"
 
 ## Usage
 ```
-Yii::$app->getModule('VkApiDriver')->request('wall.post', 'GET', [
-  'owner_id' => 0,
+$VkApiDriver = Yii::$app->getModule('VkApiDriver');
+$VkApiDriver->request('wall.post', 'GET', [
+  'owner_id' => $VkApiDriver->ownerID,
   'from_group' => 0,
   'message' => ''
 ], true);
