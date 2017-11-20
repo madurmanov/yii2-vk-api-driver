@@ -7,7 +7,10 @@ use yii\base\Module as BaseModule;
 class Module extends BaseModule
 {
   const API_URL = 'https://api.vk.com/method';
+  const OAUTH_BLANK_URL = 'https://oauth.vk.com/blank.html';
+  const OAUTH_AUTHORIZE_URL = 'https://oauth.vk.com/authorize';
 
+  public $clientID = 0;
   public $ownerID = 0;
   public $accessToken = '';
   public $lang = 'en';
@@ -36,5 +39,18 @@ class Module extends BaseModule
         break;
     }
     return json_decode($result);
+  }
+
+  public function getAccessTokenUrl($scope = [], $redirectUri = self::OAUTH_BLANK_URL)
+  {
+    $scope[] = 'offline';
+    return self::OAUTH_AUTHORIZE_URL
+      . '?' . http_build_query([
+        'client_id' => $this->clientID,
+        'display' => 'page',
+        'redirect_uri' => $redirectUri,
+        'scope' => implode(',', $scope),
+        'response_type' => 'token'
+      ]);
   }
 }
